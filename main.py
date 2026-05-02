@@ -1,3 +1,6 @@
+
+import csv
+
 # -*- coding: utf-8 -*-
 """PyNicolas.ipynb
 
@@ -66,3 +69,12 @@ print(f"Total records: {total_records}")
 print(f"Clean records: {clean_records}")
 print(f"Removed records: {total_records - clean_records}")
 
+# Save cleaned data to CSV
+with open("cleaned_waste_data.csv", "w", newline="") as file:
+    fieldnames = ["date", "location", "waste_type", "quantity_kg"]
+    writer = csv.DictWriter(file, fieldnames=fieldnames)
+
+    writer.writeheader()
+    writer.writerows(cleaned_data)
+
+print("\nCleaned data saved to cleaned_waste_data.csv")
