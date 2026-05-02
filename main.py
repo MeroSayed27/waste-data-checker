@@ -78,3 +78,20 @@ with open("cleaned_waste_data.csv", "w", newline="") as file:
     writer.writerows(cleaned_data)
 
 print("\nCleaned data saved to cleaned_waste_data.csv")
+
+
+# Data Quality Score
+quality_score = (clean_records / total_records) * 100
+
+print(f"\nData Quality Score: {quality_score:.2f}%")
+
+# Save quality report
+with open("quality_report.txt", "w") as file:
+    file.write("Waste Data Quality Report\n")
+    file.write("-------------------------\n")
+    file.write(f"Total records: {total_records}\n")
+    file.write(f"Clean records: {clean_records}\n")
+    file.write(f"Removed records: {total_records - clean_records}\n")
+    file.write(f"Data Quality Score: {quality_score:.2f}%\n")
+
+print("Quality report saved to quality_report.txt")

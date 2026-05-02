@@ -1,0 +1,6 @@
+Waste Data Quality Report
+-------------------------
+Total records: 4
+Clean records: 2
+Removed records: 2
+Data Quality Score: 50.00%
