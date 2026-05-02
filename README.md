@@ -1,17 +1,22 @@
-# Waste Data Checker (Simple Project)
+# Waste Data Quality Checker
 
-This is a small project to explore how messy real-world data can be cleaned and validated.
+This project simulates how messy real-world waste data can be cleaned, validated, and structured for further use.
 
-## What I did
-- Created sample waste data
-- Removed invalid values (negative quantities)
-- Handled missing fields (like location)
-- Printed validation messages to understand why data was removed
-- Generated a simple summary of clean vs invalid data
+## Features
+- Removes invalid data (e.g. negative values)
+- Handles missing fields (e.g. location)
+- Prints validation messages for transparency
+- Generates a cleaned dataset (CSV file)
+- Calculates a Data Quality Score
+- Creates a simple quality report
 
-## Why this matters
-In real systems, data is often messy.
+## Output Files
+- `cleaned_waste_data.csv` → cleaned dataset
+- `quality_report.txt` → summary and quality score
 
-Before using it for analysis or AI, it needs to be clean, structured, and reliable.
+## Purpose
+In real-world systems, data is often inconsistent.
 
-This project is a simple step toward working with real operational data.
+Before using it for analysis or AI systems, it needs to be clean, structured, and reliable.
+
+This project is a simple step toward building data pipelines for real operational environments.
