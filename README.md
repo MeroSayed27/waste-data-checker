@@ -1,22 +1,31 @@
-# Waste Data Quality Checker
+# Waste Data Quality Dashboard ♻️
 
-This project simulates how messy real-world waste data can be cleaned, validated, and structured for further use.
+A Streamlit dashboard for cleaning and validating waste datasets before analytics or AI workflows.
 
 ## Features
-- Removes invalid data (e.g. negative values)
-- Handles missing fields (e.g. location)
-- Prints validation messages for transparency
-- Generates a cleaned dataset (CSV file)
-- Calculates a Data Quality Score
-- Creates a simple quality report
 
-## Output Files
-- `cleaned_waste_data.csv` → cleaned dataset
-- `quality_report.txt` → summary and quality score
+* Removes invalid records
+* Detects missing locations
+* Calculates data quality score
+* Visualizes waste distribution
+* Exports cleaned CSV files
 
-## Purpose
-In real-world systems, data is often inconsistent.
+## Tech Stack
 
-Before using it for analysis or AI systems, it needs to be clean, structured, and reliable.
+* Python
+* Pandas
+* Streamlit
 
-This project is a simple step toward building data pipelines for real operational environments.
+## Screenshots
+
+### Before Upload
+
+![Before Upload](wasteScreenBeforeUpload.png)
+
+### After Upload
+
+![After Upload](wasteScreenAfterUpload.png)
+
+## Goal
+
+This project focuses on improving data quality for sustainability and analytics workflows.
