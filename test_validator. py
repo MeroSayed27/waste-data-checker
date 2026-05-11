@@ -1,0 +1,32 @@
+import pandas as pd
+from validator import clean_waste_data
+
+
+def test_invalid_quantity_removed():
+    data = {
+        "waste_type": ["plastic", "metal"],
+        "quantity_kg": [10, -5],
+        "location": ["Cairo", "Giza"]
+    }
+
+    df = pd.DataFrame(data)
+
+    cleaned_df, report = clean_waste_data(df)
+
+    assert len(cleaned_df) == 1
+    assert report["removed_records"] == 1
+
+
+def test_missing_location_removed():
+    data = {
+        "waste_type": ["plastic", "glass"],
+        "quantity_kg": [10, 5],
+        "location": ["", "Alexandria"]
+    }
+
+    df = pd.DataFrame(data)
+
+    cleaned_df, report = clean_waste_data(df)
+
+    assert len(cleaned_df) == 1
+    assert report["removed_records"] == 1
