@@ -1,0 +1,69 @@
+# Discussion Notes
+
+## Why I Built This Project
+
+I wanted to explore how unreliable operational datasets can impact analytics and AI workflows.
+
+The goal was to create a simple validation system capable of:
+
+- Detecting invalid records
+- Improving data quality
+- Producing structured diagnostic reporting
+- Separating validation logic from the UI layer
+
+## Key Design Decisions
+
+### Modular Validation
+
+Validation logic was separated into reusable functions to support future reuse in:
+
+- APIs
+- Containers
+- Streaming systems
+- Cloud or edge deployments
+
+### Streamlit Dashboard
+
+The dashboard provides:
+
+- Data visibility
+- Quality metrics
+- Validation summaries
+- CSV export functionality
+
+## Scalability Direction
+
+The current implementation processes static CSV files.
+
+Possible future evolution:
+
+- Live sensor ingestion
+- Kafka or MQTT streams
+- Distributed validation workers
+- Cloud deployment pipelines
+
+## Docker Approach
+
+Docker allows the project to:
+
+- Run consistently across environments
+- Simplify deployment
+- Support cloud or edge portability
+
+## Reliability Approach
+
+Reliability is improved through:
+
+- Automated tests
+- Structured validation rules
+- Consistent reporting
+- Reusable modular logic
+
+## Current Focus
+
+Currently improving:
+
+- Deployment understanding
+- Streaming validation concepts
+- Infrastructure thinking
+- Automated testing workflows
