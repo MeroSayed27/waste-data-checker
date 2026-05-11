@@ -1,0 +1,50 @@
+# Waste Data Quality System Design
+
+## Current Architecture
+
+The current system processes CSV waste datasets using modular validation logic.
+
+Main components:
+
+- app.py → Streamlit dashboard interface
+- validator.py → reusable validation and cleaning logic
+- test_validator.py → automated validation tests
+- requirements.txt → dependency management
+- Dockerfile → deployment portability
+
+## Validation Rules
+
+Current validation includes:
+
+- Removing records with invalid quantity values
+- Removing records with missing locations
+- Generating quality reports and metrics
+
+## Scalability Direction
+
+The validation logic is intentionally separated from the UI layer to support future scalability.
+
+Possible future extensions:
+
+- REST API integration
+- Real-time streaming validation
+- Kafka or MQTT event ingestion
+- Cloud/Edge deployment using Docker containers
+- Distributed validation pipelines
+
+## Reliability Approach
+
+Reliability is improved through:
+
+- Modular validation rules
+- Automated testing
+- Structured reporting
+- Consistent data quality metrics
+
+## Future Improvements
+
+- Add live sensor data ingestion
+- Add alerting for invalid streams
+- Add validation logging system
+- Add CI/CD pipeline
+- Add cloud deployment automation
